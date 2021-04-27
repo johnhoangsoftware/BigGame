@@ -1,0 +1,69 @@
+# depslib dependency file v1.0
+1618852325 source:e:\hoang\it\c++\project\againbiggame\main.cpp
+	<iostream>
+	"RunFunction.h"
+	"Threats.h"
+
+1618740152 e:\hoang\it\c++\project\againbiggame\ltexture.h
+	<SDL.h>
+	<SDL_image.h>
+	<stdio.h>
+	<string>
+	<vector>
+	"RunFunction.h"
+
+1618852421 e:\hoang\it\c++\project\againbiggame\runfunction.h
+
+1618339016 source:e:\hoang\it\c++\project\againbiggame\bullet.cpp
+	"Bullet.h"
+
+1618765907 e:\hoang\it\c++\project\againbiggame\bullet.h
+	"LTexture.h"
+
+1618412811 source:e:\hoang\it\c++\project\againbiggame\ltexture.cpp
+	"LTexture.h"
+
+1618851812 e:\hoang\it\c++\project\againbiggame\threats.h
+	"Bullet.h"
+	<vector>
+
+1619542368 source:d:\hoang\it\c++\project\againbiggame\main.cpp
+	"Menu.h"
+
+1619541809 d:\hoang\it\c++\project\againbiggame\runfunction.h
+	"Variable.h"
+	"LTexture.h"
+	"Bullet.h"
+	"Threats.h"
+
+1619540195 d:\hoang\it\c++\project\againbiggame\threats.h
+	"Bullet.h"
+	"Variable.h"
+
+1619542330 d:\hoang\it\c++\project\againbiggame\bullet.h
+	"LTexture.h"
+	"Variable.h"
+
+1619541975 d:\hoang\it\c++\project\againbiggame\ltexture.h
+	"Variable.h"
+
+1619542423 d:\hoang\it\c++\project\againbiggame\menu.h
+	"RunFunction.h"
+	"Variable.h"
+
+1619542396 d:\hoang\it\c++\project\againbiggame\variable.h
+	<SDL.h>
+	<SDL_image.h>
+	<SDL_mixer.h>
+	<SDL_ttf.h>
+	<iostream>
+	<stdio.h>
+	<string>
+	<vector>
+
+1619541809 source:d:\hoang\it\c++\project\againbiggame\ltexture.cpp
+	"LTexture.h"
+
+1619542090 source:d:\hoang\it\c++\project\againbiggame\bullet.cpp
+	"Bullet.h"
+
