@@ -18,12 +18,8 @@ public:
   ~Bullet();
 
   void HandleInputAction(SDL_Event e);
-  void HandleMove();
-  void HandleMoveThreats();
-
-
-
-  //bool loadBullet();
+  void HandleMove();// bắn đạn player
+  void HandleMoveThreats();//băn sdanj threast
   bool get_is_move() const {return is_move_;}
   void set_is_move(bool is_move) {is_move_ = is_move;}
 

@@ -5,7 +5,7 @@
 #include "LTexture.h"
 #include "Bullet.h"
 #include "Threats.h"
-//#include "Menu.h"
+
 //TEXTURE
 LTexture gText;
 LTexture gBullet;
@@ -144,12 +144,6 @@ bool CheckCollision(const int &KT , const int &x,const int &y, const int &z, con
   return false;
 
 }
-
-
-
-// Create LTexture
-
-
 
 bool init()
 {

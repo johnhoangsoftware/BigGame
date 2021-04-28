@@ -1,18 +1,6 @@
-
-//#include <iostream>
-//#include "Bullet.h"
-//#include "LTexture.h"
-//#include "RunFunction.h"
-//#include "Threats.h"
 #include "Menu.h"
 
 using namespace std;
-
-
-//void SetBulletList(std::vector<Bullet*> Bullet_list) {p_bullet_list_ = Bullet_list;};
-//std::vector<Bullet*> GetBulletList() const {return p_bullet_list_;};
-
-
 
 int main( int argc, char* args[] )
 {
@@ -22,8 +10,6 @@ int main( int argc, char* args[] )
 	int ScrollBG = 3240-SCREEN_HEIGHT;
     int Player_Die = 0;
     Menu gMenu;
-
-	//int j = y;
 
 	//Start up SDL and create window
 	if( !init() )
@@ -52,11 +38,9 @@ int main( int argc, char* args[] )
                 bool quit = false;
 
                 //Event handler
-
                 std::vector<Bullet*> p_bullet_list_;
 
                 // Make Threats
-
                 Threats * p_threat = new Threats[NUMTHREATS];
                 for(int i = 0; i < NUMTHREATS; i++){
                     Threats * p_threats = (p_threat+i);
@@ -90,7 +74,6 @@ int main( int argc, char* args[] )
                     gAircraft.render( x, y);
 
                     //text
-                    //gText.setWidthHeight(100,50);
                     std::string TextScore =  "Score: " + std::to_string(SCORE) +"        Chance: " + std::to_string(PLAYERPOWER-Player_Die) ;
                     gText.loadFromRenderedText(TextScore.c_str(), textColor);
                     gText.render(10,10);
@@ -124,9 +107,7 @@ int main( int argc, char* args[] )
                             }
                         }
 
-
                         if(e.type == SDL_MOUSEBUTTONDOWN){
-                            //int bulletpos=y;
                             Bullet* p_bullet = new Bullet();
                             p_bullet -> setLocation(x, y);
                             if(e.button.button == SDL_BUTTON_LEFT){
@@ -181,7 +162,6 @@ int main( int argc, char* args[] )
 
                             //check Collision player and threats
                             bool is_col = CheckCollision(0,x-5,y,p_threats -> getXThreats()-5, p_threats -> getYThreats());
-                            //bool is_col= false;
                             if(is_col)
                             {
                                 //Play Sound Broken
@@ -214,7 +194,6 @@ int main( int argc, char* args[] )
                             {
                                 Bullet * p_bullet = p_bullet_list_.at(bl);
                                 bool bul_col = CheckCollision(1,p_bullet ->getXLocation()+WIDTH_AIRCRAFT/2, p_bullet -> getYLocation(),p_threats -> getXThreats()+5, p_threats -> getYThreats() );
-                                //bool bul_col = false;
                                 if(bul_col)
                                 {
                                     SCORE++;
@@ -283,6 +262,5 @@ int main( int argc, char* args[] )
 	}// init success
 	//Free resources and close SDL
 	close();
-    //system("pause");
 	return 0;
 }

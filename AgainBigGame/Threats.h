@@ -14,7 +14,7 @@ class Threats : public LTexture
 public:
     Threats();
     ~Threats();
-    void HandleMove();
+    void HandleMove(); // di chuyen threats
     int setXYThreats(const int &x, const int& y){x_threats = x; y_threats = y;};
     int getXThreats(){return x_threats;};
     int getYThreats(){return y_threats;};
@@ -58,14 +58,10 @@ Threats::~Threats()
 }
 
 void Threats::HandleMove(){
-
-
-
-    //x_threats = (x_threats + rand_x)%SCREEN_WIDTH;
     y_threats += STEPBG+1;
     if(y_threats> SCREEN_HEIGHT) {
         y_threats = 0;
-        x_threats = rand()%(SCREEN_WIDTH-100);
+        x_threats = rand()%(SCREEN_WIDTH-WIDTH_AIRCRAFT);
     }
 }
 

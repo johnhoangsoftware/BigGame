@@ -3,19 +3,20 @@
 
 #include "RunFunction.h"
 #include "Variable.h"
+
 class Menu : public LTexture
 {
 public:
+
     Menu();
     ~Menu();
-
     void loadIntroGame( SDL_Event &e);
     void loadOutroGame( SDL_Event &e);
     bool getis_Play(){return is_Play;};
     bool getexit_Menu(){return exit_Menu;};
 
-
 private:
+
     bool exit_Menu;
     bool is_Play;
     int xMouse;
@@ -38,7 +39,6 @@ Menu::~Menu()
 void Menu::loadIntroGame(SDL_Event &e)
 {
     Mix_PlayMusic(g_Sound_Menu,-1);
-
     SDL_SetRenderDrawColor( gRenderer, 0xFF, 0xFF, 0xFF, 0xFF );
     SDL_RenderClear( gRenderer );
     gBackgroundMenu.setWidthHeight(SCREEN_WIDTH, SCREEN_HEIGHT-300);
@@ -52,29 +52,24 @@ void Menu::loadIntroGame(SDL_Event &e)
     SDL_RenderPresent(gRenderer);
     while(!exit_Menu)
     {
-
-
         while(SDL_PollEvent(&e))
         {
             if(e.type == SDL_QUIT|| e.key.keysym.sym == SDLK_ESCAPE)
             {
                 is_Play = false;
                 exit_Menu = true;
-                //break;
             }
 
             if(e.type == SDL_MOUSEBUTTONDOWN)
             {
                 xMouse = e.motion.x;
                 yMouse = e.motion.y;
-
                 if(100<= xMouse && xMouse <=300)//Play
                 {
                     if(525<= yMouse && yMouse <<600)
                     {
                         is_Play = true;
                         exit_Menu = true;
-                        //return;
                     }
                 }
                 if(400<= xMouse && xMouse <=600)//exit
@@ -82,9 +77,7 @@ void Menu::loadIntroGame(SDL_Event &e)
                     {
                         is_Play = false;
                         exit_Menu = true;
-                        //return;
                     }
-
             }
         }//while event
     }//while true
@@ -107,15 +100,12 @@ void Menu::loadOutroGame(SDL_Event &e)
     SDL_RenderPresent(gRenderer);
     while(!exit_Menu)
     {
-
-
         while(SDL_PollEvent(&e))
         {
             if(e.type == SDL_QUIT|| e.key.keysym.sym == SDLK_ESCAPE)
             {
                 is_Play = false;
                 exit_Menu = true;
-                //break;
             }
 
             if(e.type == SDL_MOUSEBUTTONDOWN)
@@ -129,7 +119,6 @@ void Menu::loadOutroGame(SDL_Event &e)
                     {
                         is_Play = true;
                         exit_Menu = true;
-                        //return;
                     }
                 }
                 if(400<= xMouse && xMouse <=600)//exit
@@ -137,10 +126,7 @@ void Menu::loadOutroGame(SDL_Event &e)
                     {
                         is_Play = false;
                         exit_Menu = true;
-                        //return;
                     }
-                    if(is_Play==true)
-                std::cout << xMouse <<" "<< yMouse<<" "<<is_Play<<std::endl;
             }
         }//while event
     }//while true
