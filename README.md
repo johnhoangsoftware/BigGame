@@ -37,8 +37,8 @@ Sử dụng C / C ++, SDL2, SDL_ttf , SDL_image, SDL_mixer thư viện phát tri
 - Các bạn điều khiển máy bay (màu xanh) tránh các máy bay và đạn của địch, click chuột để bắn đạn tiêu diệt máy bay địch, với mỗi chiếc máy bay bị tiêu diệt bạn sẽ được thêm một điểm
 - Dùng các phím mũi tên để điều khiển máy bay (màu xanh) 
 - Bắn đạn:
-+ Click chuột trái để bắn đạn Sphere.
-+ Click chuột phải để bắn đạn Laser.  
+	+ Click chuột trái để bắn đạn Sphere.
+	+ Click chuột phải để bắn đạn Laser.  
 ## Nguồn tham khảo và tài nguyên game
 - Chương trình được xây dựng trên  [Code::Blocks](https://www.codeblocks.org/). 
 - Các thư viện [SDL](https://www.libsdl.org/).
