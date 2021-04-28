@@ -43,6 +43,7 @@ Sử dụng C / C ++, SDL2, SDL_ttf , SDL_image, SDL_mixer thư viện phát tri
 - Chương trình được xây dựng trên  [Code::Blocks](https://www.codeblocks.org/). 
 - Các thư viện [SDL](https://www.libsdl.org/).
 - Tất cả các hình ảnh trong game được tải xuống từ Google Image.
+- Âm thanh sử dụng trong game được tải xuống từ [Mixkit](https://mixkit.co/free-sound-effects/game/). 
 - https://lazyfoo.net/tutorials/SDL/
 - https://phattrienphanmem123az.com/
-- Video demo: 
+- Video demo: https://youtu.be/R3XH8O4vQlI
