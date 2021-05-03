@@ -165,7 +165,7 @@ bool init()
 		}
 
 		//Create window
-		gWindow = SDL_CreateWindow( "Game by Hoang", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN );
+		gWindow = SDL_CreateWindow( "SpaceShooter", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN );
 		if( gWindow == NULL )
 		{
 			printf( "Window could not be created! SDL Error: %s\n", SDL_GetError() );
@@ -233,7 +233,9 @@ bool loadMedia()
     }
 
 
-	if( !gBackground.loadFromFile("perfectBK.png" ) )//"background1.jpg"
+	if( !gBackground.loadFromFile(
+
+                               "perfectBK.png" ) )
 	{
 		printf( "Failed to load background texture!\n"  );
 		success = false;
